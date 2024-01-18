@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Alarm Clock App</title>
+</head>
+<body>
+    <div id="home-screen">
+        <h1 id="current-time"></h1>
+        <p id="current-date"></p>
+        <button id="new-alarm-btn" onclick="showAlarmSetting()">Set New Alarm</button>
+    </div>
+
+    <div id="alarm-setting" style="display: none;">
+        <h2>Set New Alarm</h2>
+        <label for="alarm-time">Alarm Time:</label>
+        <input type="time" id="alarm-time">
+        <label for="alarm-tone">Alarm Tone:</label>
+        <select id="alarm-tone">
+            <option value="tone1.mp3">Tone 1</option>
+            <option value="tone2.mp3">Tone 2</option>
+            <!-- Add more tones as needed -->
+        </select>
+        <button onclick="setAlarm()">Set Alarm</button>
+    </div>
+
+    <div id="alarm-management" style="display: none;">
+        <h2>Alarm Management</h2>
+        <ul id="alarm-list"></ul>
+    </div>
+
+    <audio id="alarm-audio" loop>
+        <!-- Add audio source dynamically based on the selected tone -->
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
